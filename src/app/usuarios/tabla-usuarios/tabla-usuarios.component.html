@@ -1,0 +1,44 @@
+<h1>Tabla de usuarios</h1>
+<table id="usuarios">
+    <tr>
+        <th *ngFor="let columna of cabeceras">
+            {{columna}}
+
+        </th>
+    </tr>
+
+    <tr *ngFor="let filas of listaUsuarios">
+        <td>
+            {{filas.nombre}}
+
+        </td>
+        <td>
+            {{filas.fecha_nacimiento}}
+
+        </td>
+        <td>
+            {{filas.edad}} años
+
+        </td>
+
+        <td *ngIf="filas.domicilios.length > 0">
+            <ul *ngFor="let dom of filas.domicilios">
+
+                    <li>
+                        {{dom.domicilio}}, #{{dom.numero_exterior}}, {{dom.colonia}}, {{dom.ciudad}}, {{dom.cp}}
+
+                    </li>
+            </ul>
+
+           
+        </td>
+
+        <td *ngIf="filas.domicilios.length == 0">
+            <ul>
+                Sin domicilio asignado
+
+            </ul>
+        </td>
+      
+    </tr>
+</table>

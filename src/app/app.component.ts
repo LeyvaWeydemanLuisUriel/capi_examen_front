@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'capi_examen_front_luis-uriel-leyva-weydeman';
+  title = 'Usuarios';
 }
